@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girazol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sunflower-wrapper">
+        <!-- Girasol 1 -->
+        <div class="sunflower sunflower-1">
+            <div class="flower_wrapper">
+                <div class="flower_stem"></div>
+                <div class="flower_center"></div>
+                <div class="flower_petal flower_petal-1"></div>
+                <div class="flower_petal flower_petal-2"></div>
+                <div class="flower_petal flower_petal-3"></div>
+                <div class="flower_petal flower_petal-4"></div>
+                <div class="flower_petal flower_petal-5"></div>
+                <div class="flower_petal flower_petal-6"></div>
+                <div class="flower_petal flower_petal-7"></div>
+                <div class="flower_petal flower_petal-8"></div>
+                <div class="flower_petal flower_petal-9"></div>
+                <div class="flower_petal flower_petal-10"></div>
+                <div class="flower_petal flower_petal-11"></div>
+                <div class="flower_petal flower_petal-12"></div>
+                <div class="flower_leaf flower_leaf-1"></div>
+                <div class="flower_leaf flower_leaf-2"></div>
+            </div>
+        </div>
+    
+        <!-- Girasol 2 -->
+        <div class="sunflower sunflower-2">
+            <div class="flower_wrapper">
+                <div class="flower_stem"></div>
+                <div class="flower_center"></div>
+                <div class="flower_petal flower_petal-1"></div>
+                <div class="flower_petal flower_petal-2"></div>
+                <div class="flower_petal flower_petal-3"></div>
+                <div class="flower_petal flower_petal-4"></div>
+                <div class="flower_petal flower_petal-5"></div>
+                <div class="flower_petal flower_petal-6"></div>
+                <div class="flower_petal flower_petal-7"></div>
+                <div class="flower_petal flower_petal-8"></div>
+                <div class="flower_petal flower_petal-9"></div>
+                <div class="flower_petal flower_petal-10"></div>
+                <div class="flower_petal flower_petal-11"></div>
+                <div class="flower_petal flower_petal-12"></div>
+                <div class="flower_leaf flower_leaf-1"></div>
+                <div class="flower_leaf flower_leaf-2"></div>
+            </div>
+        </div>
+    
+        <!-- Girasol 3 -->
+        <div class="sunflower sunflower-3">
+            <div class="flower_wrapper">
+                <div class="flower_stem"></div>
+                <div class="flower_center"></div>
+                <div class="flower_petal flower_petal-1"></div>
+                <div class="flower_petal flower_petal-2"></div>
+                <div class="flower_petal flower_petal-3"></div>
+                <div class="flower_petal flower_petal-4"></div>
+                <div class="flower_petal flower_petal-5"></div>
+                <div class="flower_petal flower_petal-6"></div>
+                <div class="flower_petal flower_petal-7"></div>
+                <div class="flower_petal flower_petal-8"></div>
+                <div class="flower_petal flower_petal-9"></div>
+                <div class="flower_petal flower_petal-10"></div>
+                <div class="flower_petal flower_petal-11"></div>
+                <div class="flower_petal flower_petal-12"></div>
+                <div class="flower_leaf flower_leaf-1"></div>
+                <div class="flower_leaf flower_leaf-2"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Luces y fondo -->
+    <div class="light light-1"></div>
+    <div class="light light-2"></div>
+    <div class="light light-3"></div>
+    <div class="light light-4"></div>
+    <div class="light light-5"></div>
+    <div class="light light-6"></div>
+    <div class="light light-7"></div>
+    <div class="light light-8"></div>
+    <div class="light light-9"></div>
+    <div class="light light-10"></div>
+    <div class="light light-11"></div>
+    <div class="light light-12"></div>
+    
+    <div id="textMessage" class="text-message">
+        <p>Pingui, eres mi unica estrella en mi espacio oscuro. Cada pétalo de estas hermosos girasoles refleja la belleza y el encanto que tienes tú en mi vida. Te quiero más que a todas las flores del mundo, especialmente a estas amarillas que hoy te regalo, porque representan el amor radiante y eterno que siento por ti.</p>
+    </div>
+
+
+</body>
+
+<script>
+    const textMessageElement = document.getElementById('textMessage');
+    const originalMessage = 'Pingui, eres mi unica estrella en mi espacio oscuro. Cada pétalo de estas hermosos girasoles refleja la belleza y el encanto que tienes tú en mi vida. Te quiero más que a todas las flores del mundo, especialmente a estas amarillas que hoy te regalo, porque representan el amor radiante y eterno que siento por ti.';
+    const newMessage = '우주만큼 널 사랑해, 그 끝없는 공간처럼. (Traducelo Pingui)';
+
+    textMessageElement.addEventListener('click', function() {
+        toggleMessage();
+    });
+
+    textMessageElement.addEventListener('keydown', function(event) {
+        if (event.key === 'Tab') {
+            toggleMessage();
+        }
+    });
+
+    function toggleMessage() {
+        textMessageElement.style.opacity = 0;
+        setTimeout(() => {
+            if (textMessageElement.textContent.trim() === originalMessage) {
+                textMessageElement.textContent = newMessage;
+            } else {
+                textMessageElement.textContent = originalMessage;
+            }
+            textMessageElement.style.opacity = 0.8;
+        }, 500);
+    }
+</script>
+</html>
